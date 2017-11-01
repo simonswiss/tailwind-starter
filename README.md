@@ -2,6 +2,8 @@
 
 #### A starter kit to get going with tailwind, gulp and browser-sync.
 
+![tailwind starter kit](https://i.imgur.com/gdQSqZX.png)
+
 Time to design in the browser and create something awesome with [tailwind](https://tailwindcss.com)!
 
 This starter kit gives you a [browser-sync dev server](https://browsersync.io), which comes pretty handy. Everytime you save a HTML file, your browser will inject new styles / reload the page for your convenience, so you can focus on what you're creating.
