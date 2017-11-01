@@ -1,5 +1,5 @@
 // project paths are set in package.json
-const pkg = require("./package.json").paths;
+const paths = require("./package.json").paths;
 
 const gulp = require("gulp");
 const postcss = require("gulp-postcss");
@@ -9,9 +9,11 @@ const browserSync = require("browser-sync").create();
 // compiling tailwind CSS
 gulp.task("css", () => {
   return gulp
-    .src(pkg.src.css + "*.css")
-    .pipe(postcss([tailwindcss(pkg.config.tailwind), require("autoprefixer")]))
-    .pipe(gulp.dest(pkg.dist.css));
+    .src(paths.src.css + "*.css")
+    .pipe(
+      postcss([tailwindcss(paths.config.tailwind), require("autoprefixer")])
+    )
+    .pipe(gulp.dest(paths.dist.css));
 });
 
 // browser-sync dev server
@@ -22,9 +24,9 @@ gulp.task("serve", ["css"], () => {
     }
   });
 
-  gulp.watch(pkg.src.css + "*.css", ["css"]);
-  gulp.watch(pkg.config.tailwind, ["css"]);
-  gulp.watch(pkg.dist.base + "*.html").on("change", browserSync.reload);
+  gulp.watch(paths.src.css + "*.css", ["css"]);
+  gulp.watch(paths.config.tailwind, ["css"]);
+  gulp.watch(paths.dist.base + "*.html").on("change", browserSync.reload);
 });
 
 // default task
