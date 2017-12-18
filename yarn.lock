@@ -2266,6 +2266,10 @@ mkdirp@0.3.0:
   dependencies:
     minimist "0.0.8"
 
+mousetrap@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/mousetrap/-/mousetrap-1.6.1.tgz#2a085f5c751294c75e7e81f6ec2545b29cbf42d9"
+
 ms@0.7.1:
   version "0.7.1"
   resolved "https://registry.yarnpkg.com/ms/-/ms-0.7.1.tgz#9cd13c03adbff25b65effde7ce864ee952017098"
@@ -2802,7 +2806,7 @@ postcss@^5.0.0, postcss@^5.0.18, postcss@^5.0.20, postcss@^5.0.21, postcss@^5.0.
     source-map "^0.5.6"
     supports-color "^3.2.3"
 
-postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.3, postcss@^6.0.9:
+postcss@^6.0.0:
   version "6.0.13"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.13.tgz#b9ecab4ee00c89db3ec931145bd9590bbf3f125f"
   dependencies:
@@ -2810,7 +2814,7 @@ postcss@^6.0.0, postcss@^6.0.1, postcss@^6.0.3, postcss@^6.0.9:
     source-map "^0.6.1"
     supports-color "^4.4.0"
 
-postcss@^6.0.14:
+postcss@^6.0.1, postcss@^6.0.14, postcss@^6.0.3, postcss@^6.0.9:
   version "6.0.14"
   resolved "https://registry.yarnpkg.com/postcss/-/postcss-6.0.14.tgz#5534c72114739e75d0afcf017db853099f562885"
   dependencies:
@@ -3534,13 +3538,14 @@ table@^4.0.1:
     slice-ansi "1.0.0"
     string-width "^2.1.1"
 
-tailwindcss@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.1.1.tgz#c86351bd0d47e9ea73b64caafee443db16bf1f12"
+tailwindcss@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-0.4.0.tgz#3e38cb15aed46158d77f67a32865bf4d145065f7"
   dependencies:
     commander "^2.11.0"
     fs-extra "^4.0.2"
     lodash "^4.17.4"
+    mousetrap "^1.6.1"
     nodemon "^1.11.0"
     postcss "^6.0.9"
     postcss-functions "^3.0.0"

@@ -272,6 +272,24 @@ p {
 /**
  * Tailwind custom reset styles
  */
+*,
+*::before,
+*::after {
+  border-width: 0;
+  border-style: solid;
+  border-color: #dae1e7;
+}
+/**
+ * Temporary reset for a change introduced in Chrome 62 but now reverted.
+ *
+ * We can remove this when the reversion is in a normal Chrome release.
+ */
+
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  border-radius: 0;
+}
 
 
 [role=button] {
@@ -319,28 +337,25 @@ p {
   }
 }
 
+.font-sans {
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
 .font-black {
   font-weight: 900;
 }
 
-.font-sans {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue;
-}
-
-.text-grey-darker {
-  color: #596a73;
-}
-
-.text-purple-dark {
-  color: #794acf;
-}
-
-.text-purple {
-  color: #9561e2;
-}
-
 .leading-normal {
   line-height: 1.5;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem;
 }
 
 .max-w-md {
@@ -357,13 +372,16 @@ p {
   padding-bottom: 4rem;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
+.text-grey-darker {
+  color: #606f7b;
 }
 
-.mx-auto {
-  margin-left: auto;
-  margin-right: auto;
+.text-purple-dark {
+  color: #794acf;
+}
+
+.text-purple {
+  color: #9561e2;
 }
 
 /**

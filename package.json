@@ -19,7 +19,7 @@
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-postcss": "^7.0.0",
-    "tailwindcss": "^0.1.1"
+    "tailwindcss": "^0.4.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
