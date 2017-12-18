@@ -3,6 +3,7 @@ const paths = require("./package.json").paths;
 
 const gulp = require("gulp");
 const postcss = require("gulp-postcss");
+const purgecss = require("gulp-purgecss");
 const tailwindcss = require("tailwindcss");
 const browserSync = require("browser-sync").create();
 
@@ -13,6 +14,7 @@ gulp.task("css", () => {
     .pipe(
       postcss([tailwindcss(paths.config.tailwind), require("autoprefixer")])
     )
+    .pipe(purgecss({ content: [paths.dist.base + "*.html"] }))
     .pipe(gulp.dest(paths.dist.css));
 });
 

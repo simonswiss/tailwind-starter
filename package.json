@@ -1,8 +1,7 @@
 {
   "name": "tailwind-starter",
   "version": "1.0.0",
-  "description":
-    "A starter kit to get going with tailwind, gulp and browser-sync.",
+  "description": "A starter kit to get going with tailwind, gulp and browser-sync.",
   "main": "gulpfile.js",
   "paths": {
     "src": {
@@ -34,5 +33,8 @@
     "browser-sync"
   ],
   "author": "simonswiss",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "gulp-purgecss": "^0.15.0"
+  }
 }
