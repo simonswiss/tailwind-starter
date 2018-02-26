@@ -376,12 +376,16 @@ p {
   color: #606f7b;
 }
 
-.text-purple-dark {
-  color: #794acf;
-}
-
 .text-purple {
   color: #9561e2;
+}
+
+.hover\:text-red:hover {
+  color: #e3342f;
+}
+
+.hover\:text-purple-dark:hover {
+  color: #794acf;
 }
 
 /**

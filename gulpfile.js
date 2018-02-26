@@ -7,6 +7,13 @@ const purgecss = require("gulp-purgecss");
 const tailwindcss = require("tailwindcss");
 const browserSync = require("browser-sync").create();
 
+// Custom extractor for purgeCSS, to avoid stripping classes with `:` prefixes
+class TailwindExtractor {
+  static extract(content) {
+    return content.match(/[A-z0-9-:\/]+/g) || [];
+  }
+}
+
 // compiling tailwind CSS
 gulp.task("css", () => {
   return gulp
@@ -14,7 +21,17 @@ gulp.task("css", () => {
     .pipe(
       postcss([tailwindcss(paths.config.tailwind), require("autoprefixer")])
     )
-    .pipe(purgecss({ content: [paths.dist.base + "*.html"] }))
+    .pipe(
+      purgecss({
+        content: [paths.dist.base + "*.html"],
+        extractors: [
+          {
+            extractor: TailwindExtractor,
+            extensions: ["html", "js"]
+          }
+        ]
+      })
+    )
     .pipe(gulp.dest(paths.dist.css));
 });
 
