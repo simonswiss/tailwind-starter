@@ -15,7 +15,9 @@ Go ahead and build something cool!
 1. Clone this repo
 2. `yarn` or `npm install` to install the required dependencies
 3. Customise the `tailwind.js` config file (only if needed!)
-4. `gulp` to kickoff the dev server, and open your browser window
+4. `gulp` to kickoff the dev server, and open your browser window. Optionally you can run the following:
+	* `yarn dev` or `npm run dev` to start the development server
+	* `yarn build` or `npm run build` to run a build without starting the server
 5. Edit `index.html` in `./dist/` and start creating!
 
 If you make changes to the tailwind config, you may need to stop and restart the browser-sync server for changes to apply.
